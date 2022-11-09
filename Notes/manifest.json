@@ -1,0 +1,19 @@
+{
+    "name": "Chrome Notes",
+    "version": "1.0.0",
+    "description": "Add random notes to chrome extension and store it",
+    "manifest_version": 3,
+    "author": "Bill Le",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Notes"
+    },
+    "icons":{
+        "16":"notepad.png",
+        "48":"notepad.png",
+        "124":"notepad.png"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
