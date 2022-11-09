@@ -39,6 +39,11 @@ function div(icon, name, id){
 function deleteAddListner(){
     var deletes = document.getElementsByClassName("delete");
     for(let i of deletes){
+        i.parentNode.addEventListener("click", function(){
+            if(i.parentNode.classList.value.includes("link")){
+                chrome.tabs.update({ url: i.dataset.id });
+            }
+        })
         i.addEventListener("click", function(e){
             var curLink = e.target.dataset.id;
             var is_sublink = e.target.parentNode.classList.value.includes("sublink");
